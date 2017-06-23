@@ -1,14 +1,20 @@
+#include "StdAfx.h"
+#include "Utils.h"
+
+#include "IocpHandler.h"
+#include "SharedIocpData.h"
+#include "IocpContext.h"
+#include "Connection.h"
+
 //! Copyright Alan Ning 2010
 //! Distributed under the Boost Software License, Version 1.0.
 //! (See accompanying file LICENSE_1_0.txt or copy at
 //! http://www.boost.org/LICENSE_1_0.txt)
 
-#include "StdAfx.h"
-#include "Utils.h"
-#include "SharedIocpData.h"
-#include "IocpContext.h"
-#include "Connection.h"
-#include "../IocpHandler.h"
+
+
+#define _WINSOCK_DEPRECATED_NO_WARNINGS 1
+
 namespace iocp { namespace detail {
 
 	SOCKET CreateOverlappedSocket()
@@ -16,8 +22,8 @@ namespace iocp { namespace detail {
 		return WSASocket(
 			AF_INET, 
 			SOCK_STREAM, 
-			IPPROTO_TCP, 
-			NULL, 
+			IPPROTO_TCP,
+			nullptr, 
 			0, 
 			WSA_FLAG_OVERLAPPED);
 	}
@@ -128,10 +134,10 @@ namespace iocp { namespace detail {
 			&bytesReceived_,
 			&iocpData.m_acceptContext) == FALSE)
 		{
-			DWORD lastError = GetLastError();
+			auto lastError = GetLastError();
 			if (lastError != ERROR_IO_PENDING)
 			{
-				if(iocpData.m_iocpHandler != NULL)
+				if(iocpData.m_iocpHandler != nullptr)
 				{
 					iocpData.m_iocpHandler->OnServerError(lastError);
 				}

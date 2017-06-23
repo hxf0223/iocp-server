@@ -23,10 +23,8 @@ public:
 		, m_listenSocket(INVALID_SOCKET)
 		, m_acceptContext(INVALID_SOCKET, 0, CIocpContext::Accept, 4096)
 		, m_rcvBufferSize(0)
-		, m_currentId(0)
-		, m_acceptExFn(NULL)
-
-	{
+		, m_acceptExFn(nullptr)
+		, m_currentId(0) {
 
 	}
 

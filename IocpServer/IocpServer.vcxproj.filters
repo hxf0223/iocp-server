@@ -43,14 +43,14 @@
     <ClInclude Include="detail\SharedIocpData.h">
       <Filter>source\detail</Filter>
     </ClInclude>
-    <ClInclude Include="detail\StdAfx.h">
-      <Filter>source\detail</Filter>
-    </ClInclude>
     <ClInclude Include="detail\Utils.h">
       <Filter>source\detail</Filter>
     </ClInclude>
     <ClInclude Include="detail\WorkerThread.h">
       <Filter>source\detail</Filter>
+    </ClInclude>
+    <ClInclude Include="StdAfx.h">
+      <Filter>source</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -72,14 +72,14 @@
     <ClCompile Include="detail\SendQueue.cpp">
       <Filter>source\detail</Filter>
     </ClCompile>
-    <ClCompile Include="detail\StdAfx.cpp">
-      <Filter>source\detail</Filter>
-    </ClCompile>
     <ClCompile Include="detail\Utils.cpp">
       <Filter>source\detail</Filter>
     </ClCompile>
     <ClCompile Include="detail\WorkerThread.cpp">
       <Filter>source\detail</Filter>
+    </ClCompile>
+    <ClCompile Include="StdAfx.cpp">
+      <Filter>source</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

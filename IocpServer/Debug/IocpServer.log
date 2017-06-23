@@ -3,20 +3,18 @@
   IocpHandler.cpp
   WorkerThread.cpp
   Utils.cpp
-e:\iocp-server\iocpserver\detail\utils.cpp(22): warning C4996: 'WSASocketA': Use WSASocketW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+e:\iocp-server\iocpserver\detail\utils.cpp(28): warning C4996: 'WSASocketA': Use WSASocketW() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
           c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(3457) : 参见“WSASocketA”的声明
-e:\iocp-server\iocpserver\detail\utils.cpp(77): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
+e:\iocp-server\iocpserver\detail\utils.cpp(83): warning C4996: 'inet_ntoa': Use inet_ntop() or InetNtop() instead or define _WINSOCK_DEPRECATED_NO_WARNINGS to disable deprecated API warnings
           c:\program files (x86)\windows kits\8.1\include\um\winsock2.h(1868) : 参见“inet_ntoa”的声明
   SendQueue.cpp
   IocpContext.cpp
   ConnectionManager.cpp
   Connection.cpp
   正在生成代码...
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1193,5): warning MSB8012: TargetPath(E:\iocp-server\Debug\IocpServer.dll) does not match the Linker's OutputFile property value (E:\iocp-server\Debug\IocpServer-1.2-vc90d.dll). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
-C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(1195,5): warning MSB8012: TargetName(IocpServer) does not match the Linker's OutputFile property value (IocpServer-1.2-vc90d). This may cause your project to build incorrectly. To correct this, please make sure that $(OutDir), $(TargetName) and $(TargetExt) property values match the value specified in %(Link.OutputFile).
 Connection.obj : warning LNK4075: 忽略“/EDITANDCONTINUE”(由于“/SAFESEH”规范)
 libboost_thread-vc120-mt-gd-1_56.lib(thread.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项:  值“2”不匹配值“0”(Connection.obj 中)
 libboost_thread-vc120-mt-gd-1_56.lib(tss_pe.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项:  值“2”不匹配值“0”(Connection.obj 中)
 libboost_system-vc120-mt-gd-1_56.lib(error_code.obj) : error LNK2038: 检测到“_ITERATOR_DEBUG_LEVEL”的不匹配项:  值“2”不匹配值“0”(Connection.obj 中)
      正在创建库 E:\iocp-server\Debug\IocpServer.lib 和对象 E:\iocp-server\Debug\IocpServer.exp
-E:\iocp-server\Debug\IocpServer-1.2-vc90d.dll : fatal error LNK1319: 检测到 3 个不匹配项
+E:\iocp-server\Debug\IocpServer.dll : fatal error LNK1319: 检测到 3 个不匹配项
