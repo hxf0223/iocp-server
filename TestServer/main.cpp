@@ -9,7 +9,7 @@ void RunNormalServer(bool sendGracefulShutdownMessage)
 		);
 
 	//! Simple echo server that receives and sends at normal rate.
-	CIocpServer *echoServer = new CIocpServer(50000,h);
+	auto echoServer = new CIocpServer(50000, h);
 
 	// enter something in to exit
 	char c;
@@ -26,8 +26,7 @@ void RunSlowReader(bool sendGracefulShutdownMessage)
 
 	//! Stress test server that receives with 1 byte buffer. This will
 	//! maximize the number of IO Completion port traffic.
-	CIocpServer *echoServer = 
-		new CIocpServer(50000,h, INADDR_ANY, 1);
+	auto echoServer = new CIocpServer(50000, h, INADDR_ANY, 1);
 
 	// enter something in to exit
 	char c;
@@ -39,7 +38,7 @@ void RunSlowReader(bool sendGracefulShutdownMessage)
 int main()
 {
 	//RunSlowReader(false);
-	RunNormalServer(false);
+	RunNormalServer(true);
 
 	return 0;
 }
